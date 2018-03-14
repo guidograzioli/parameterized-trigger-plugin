@@ -77,7 +77,7 @@ public class RemoteBuildConfigurationTest {
 
         String remoteUrl = jenkinsRule.getURL().toString();
         RemoteJenkinsServer remoteJenkinsServer =
-                new RemoteJenkinsServer(remoteUrl, "JENKINS", false, auth);
+                new RemoteJenkinsServer(remoteUrl, "JENKINS", false, false, auth);
         RemoteBuildConfiguration.DescriptorImpl descriptor =
                 jenkinsRule.jenkins.getDescriptorByType(RemoteBuildConfiguration.DescriptorImpl.class);
         descriptor.setRemoteSites(remoteJenkinsServer);
